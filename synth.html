@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>synth</title>
+    <style>
+
+    body {
+    background-color: lightyellow;
+    }
+    .test{
+
+    font-size:40px;
+
+    }
+    .spacing{
+    padding-left: 180px;
+    }
+    .other{
+
+    font-size:30px;
+    }
+    .additive{
+    width: 400px;
+    height: 100px;
+    background-color:lightpink;
+    text-align: center;
+    padding-top: 50px;
+    }
+    .am{
+     width: 400px;
+    height: 100px;
+    background-color:lightgreen;
+    text-align: center;
+    padding-top: 50px;
+    }
+     .fm{
+     width: 400px;
+    height: 150px;
+    background-color:lightblue;
+    text-align: center;
+    padding-top: 50px;
+    }
+    .select_wave{
+    background-color:lightgrey;
+    }
+
+
+
+
+
+
+    </style>
+</head>
+<script src = "synth.js"> </script>
+
+
+<body>
+
+
+<p id="note_played" class="test spacing"> <br> </p>
+<p id="number_of_notes" class = "test"> </p>
+
+
+<label for="select_wave" class = "other">Wave Type</label>
+
+<select  id="select_wave" class = "other">
+    <option value="sine">Sine</option>
+    <option value="sawtooth">Sawtooth</option>
+    <option value="square">Square</option>
+    <option value="triangle">Triangle</option>
+
+
+
+</select>
+
+
+<br>
+
+
+
+<label for="select_synth" class = "other">Synthesis </label>
+
+<select  id="select_synth" class = "other">
+    <option value="AdditiveSynthesis">Additive Synthesis</option>
+    <option value="AM">AM</option>
+    <option value="FM">FM</option>
+
+</select>
+
+
+
+<div class = "additive">
+<span > Additive Synthesis Options: <br> </br>Partials          </span>
+<select  id="select_partials" >
+
+    <option value=1>1</option>
+    <option value=2>2</option>
+    <option value=3>3</option>
+    <option value=4>4</option>
+    <option value=5>5</option>
+    <option value=6>6</option>
+
+
+</select>
+</div>
+
+
+</div >
+
+<div class = "am"> AM Options: <br>
+ modulator frequency <br>
+
+0 <input type="range" min=1 max=1000 id="mod"> 1000 </input> <br>
+
+
+
+</div>
+
+<div class = "fm"> FM Options: <br>
+    modulator frequency <br>
+
+    0 <input type="range" min=1 max=1000 id="modfm"> 1000 </input> <br>
+
+    index of modulation <br>
+    0 <input type="range"  min=1 max=1000 id="index"> 1000</input>
+
+</div>
+
+</body>
+
+
+
+</html>
+
+
